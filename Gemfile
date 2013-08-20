@@ -16,3 +16,12 @@ group :development do
   gem 'quiet_assets'
   gem 'thin'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+end
