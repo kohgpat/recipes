@@ -1,0 +1,36 @@
+// Components
+
+// Clearance
+
+#clearance {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 8px 8px #eee;
+  color: $text-color;
+  margin: 250px auto 0 auto;
+  padding: 0 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+
+  &.sign-up, &.sign-in {
+    width: 300px;
+
+    .other-links {
+      margin-top: 20px;
+
+      a {
+        font-weight: bold;
+        display: block;
+      }
+    }
+  }
+
+  &.password-reset {
+    width: 500px;
+
+    .submit-field {
+      margin-top: 20px;
+    }
+  }
+}
