@@ -1,0 +1,32 @@
+// Core
+
+// Variables
+
+// Grays
+
+$gray: #333;
+
+// Colors
+
+$brand-primary: #205081;
+$brand-success: #8aba56;
+$brand-danger: #d94c4e;
+
+// Components
+
+$body-bg: #fff;
+$text-color: $gray;
+
+$link-color: $brand-primary;
+$link-hover-color: darken($brand-primary, 15%);
+
+$padding-vertical: 10px;
+$padding-horizontal: 15px;
+
+// Typography
+
+$font-family: $helvetica;
+$font-size: 14px;
+$font-weight: normal;
+
+$line-height: 20/14;

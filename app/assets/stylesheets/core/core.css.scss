@@ -1,0 +1,24 @@
+// Core
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
