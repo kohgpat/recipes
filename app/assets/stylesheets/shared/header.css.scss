@@ -4,6 +4,8 @@
 
 #header {
   @include background(linear-gradient(to bottom, #009dd1, #0093cd));
+  border-top: 1px solid darken(#009dd1, 15%);
+  border-bottom: 1px solid darken(#0093cd, 15%);
   height: 80px;
 
   // Inline header components
