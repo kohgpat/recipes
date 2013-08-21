@@ -38,3 +38,25 @@ end
 Given /^(?:I am|I have|I) signed up (?:as|with) "(.*)"$/ do |email|
   @me = create(:user, :email => email)
 end
+
+When /^I go to the password reset request page$/ do
+  visit new_password_path
+end
+
+Then /^a password reset message should be sent to "(.*)"$/ do |email|
+  user = User.find_by_email(email)
+  expect(user.confirmation_token).not_to be_blank
+end
+
+When /^I follow the password reset link sent to "(.*)"$/ do |email|
+  user = User.find_by_email(email)
+  visit edit_user_password_path(user_id: user,
+                                token: user.confirmation_token)
+end
+
+When /^I update my password with "(.*)"$/ do |password|
+  steps %{
+    When I fill in "Choose password" with "#{password}"
+    And I press "Save this password"
+  }
+end
