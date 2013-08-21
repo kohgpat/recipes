@@ -156,6 +156,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
   clearance
   coffee-rails (~> 3.2.1)
   cucumber-rails
