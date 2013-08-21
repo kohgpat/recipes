@@ -7,20 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="header">
-    <%= link_to "Recipes", root_path, class: "brand" %>
-    <%= render "/layouts/navigation" %>
-    <%= render "/layouts/user" %>
-  </div>
-
-  <div id="flash">
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-  </div>
-
-  <div id="main">
-    <%= yield %>
-  </div>
+  <%= render "/layouts/header" %>
+  <%= render "/layouts/flash" %>
+  <%= render "/layouts/main" %>
 </body>
 </html>
