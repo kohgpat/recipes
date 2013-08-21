@@ -16,6 +16,11 @@
   &.sign-up, &.sign-in {
     width: 300px;
 
+    input[type="email"],
+    input[type="password"] {
+      width: 300px;
+    }
+
     .other-links {
       margin-top: 20px;
 
