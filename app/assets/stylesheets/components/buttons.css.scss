@@ -1,0 +1,56 @@
+// Components
+
+// Buttons
+
+.btn {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-primary, 5%);
+  }
+
+  &:active {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+.btn-success {
+  background-color: $brand-success;
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-success, 5%);
+  }
+
+  &:active {
+    background-color: darken($brand-success, 10%);
+  }
+}
+
+.btn-danger {
+  background-color: $brand-danger;
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-danger, 5%);
+  }
+
+  &:active {
+    background-color: darken($brand-danger, 10%);
+  }
+}
