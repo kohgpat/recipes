@@ -16,6 +16,7 @@ gem 'jquery-rails'
 group :development do
   gem 'quiet_assets'
   gem 'thin'
+  gem 'letter_opener'
 end
 
 group :development, :test do
