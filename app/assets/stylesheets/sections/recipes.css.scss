@@ -1,0 +1,54 @@
+// Sections
+
+// Recipes
+
+.recipe {
+  > .title, .description {
+    display: block;
+  }
+
+  > .title, .title a {
+    color: #f35b4c;
+    margin-bottom: 10px;
+
+    &:focus,
+    &:hover {
+      color: darken(#f35b4c, 15%); 
+    }
+  }
+
+  .ingredients {
+    .title {
+      color: #555;
+    }
+
+    .list {
+      .title, .amount {
+        color: $text-color;
+      }
+
+      .title {
+        padding-right: 100px;
+      }
+    }
+  }
+
+  .steps {
+    .title {
+      color: #555;
+    }
+
+    .step {
+      display: block;
+      margin-bottom: 10px;
+
+      .number {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
