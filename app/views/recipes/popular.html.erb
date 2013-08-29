@@ -1,0 +1,11 @@
+<div class="recipes">
+  <div id="Popular">
+    <h2>Popular</h2>
+    <% @recipes.each do |recipe| %>
+      <div class="recipe">
+        <h2 class="title"><%= link_to recipe.title, recipe_path(recipe.id) %></h2>
+        <span class="description"><%= recipe.description %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
