@@ -1,3 +1,19 @@
 Recipes::Application.routes.draw do
-  root :to => "pages#index"
+  root to: 'recipes#index'
+
+  constraints Clearance::Constraints::SignedIn.new do
+    root to: 'recipes#index'
+  end
+
+  constraints Clearance::Constraints::SignedOut.new do
+    root to: 'recipes#index'
+  end
+
+  get 'popular' => 'recipes#popular'
+
+  resources :recipes do
+    collection do
+      get 'popular'
+    end
+  end
 end
