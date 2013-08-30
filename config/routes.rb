@@ -9,6 +9,8 @@ Recipes::Application.routes.draw do
     root to: 'recipes#index'
   end
 
+  resource :session
+
   get 'popular' => 'recipes#popular'
 
   resources :recipes do
