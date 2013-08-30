@@ -2,6 +2,15 @@
 
 // Recipes
 
+.recipes {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 8px 8px #eee;
+  color: $text-color;
+  padding: 0 20px 20px 20px;
+}
+
 .recipe {
   > .title, .description {
     display: block;
