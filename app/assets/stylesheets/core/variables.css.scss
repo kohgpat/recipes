@@ -15,7 +15,7 @@ $brand-danger: #d94c4e;
 // Components
 
 $body-bg: #f1f1f1;
-$text-color: rgb(60, 60, 60);
+$text-color: $gray;
 
 $link-color: $brand-primary;
 $link-hover-color: darken($brand-primary, 15%);
