@@ -16,6 +16,7 @@
   &.sign-up, &.sign-in {
     width: 300px;
 
+    input[type="text"],
     input[type="email"],
     input[type="password"] {
       width: 290px;

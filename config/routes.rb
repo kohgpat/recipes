@@ -11,6 +11,8 @@ Recipes::Application.routes.draw do
 
   resource :session
 
+  resources :users, only: [:show]
+
   get 'popular' => 'recipes#popular'
 
   resources :recipes do
