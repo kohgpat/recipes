@@ -1,7 +1,7 @@
 <div id="user">
   <% if signed_in? %>
     <div id="logout">
-      <%= link_to current_user.username, "#", class: 'email' %>
+      <%= link_to current_user.username, "/#{current_user.username}", class: 'email' %>
       <%= link_to 'Sign out', sign_out_path, :method => :delete %>
     </div>
   <% else %>
