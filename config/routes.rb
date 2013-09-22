@@ -14,7 +14,7 @@ Recipes::Application.routes.draw do
     :only => [:create, :new]
 
   resource :session,
-    :controller => 'clearance/sessions',
+    :controller => 'sessions',
     :only => [:create]
 
   resources :users,
