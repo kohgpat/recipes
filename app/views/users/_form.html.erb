@@ -1,14 +1,17 @@
 <div class='text-field'>
   <%= form.label :username %>
   <%= form.text_field :username %>
+  <%= form.errors_for(:username) %>
 </div>
 
 <div class='text-field'>
   <%= form.label :email %>
   <%= form.text_field :email, :type => 'email' %>
+  <%= form.errors_for(:email) %>
 </div>
 
 <div class='password-field'>
   <%= form.label :password %>
   <%= form.password_field :password %>
+  <%= form.errors_for(:password) %>
 </div>

@@ -16,6 +16,12 @@ form {
     margin-bottom: 5px;
   }
 
+  label.error {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: red;
+  }
+
   input {
     margin-bottom: 20px;
   }
