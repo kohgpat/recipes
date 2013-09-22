@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   validates :username, format: { with: /\A[A-Za-z][A-Za-z_\-0-9]*\z/ }
   validates :username, length: 2..40
   
-  validate :allowed_username
+  validate :allowed_username, on: :create
 
   def self.authenticate(email, password)
     if user = find_by_email(email) || find_by_username(email)
@@ -21,7 +21,10 @@ class User < ActiveRecord::Base
   protected
 
   def allowed_username
-    path = Rails.applicaton.routes.recognize_path("#{username}", method: :get) rescue nil
-    errors.add(:username, "username is not allowed") if path or BLACKLIST_USERNAMES.include?(username)
+    path = Rails.application.routes.recognize_path(username, method: :get)
+
+    if (path and !path.has_key?(:id)) or BLACKLIST_USERNAMES.include?(username)
+      errors.add(:username, "is not allowed")
+    end
   end
 end
